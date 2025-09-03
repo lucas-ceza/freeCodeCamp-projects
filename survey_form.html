@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro de empresa</title>
+    <link rel="stylesheet" href="survey_form.css">
+  </head>
+  <body>
+    <h1 id="title">Cadastro de Empresa</h1>
+    <p id="description">Nos passe os dados necessários e ajudaremos sua empresa com soluções certas! </p>
+    <form id="survey-form" method="POST">
+      <div class="form-group">
+        <label for="name" id="name-label">Nome da empresa <input id="name" type="text" class="form-control" placeholder="Digite o nome da empresa" required/></label>
+        <label for="email" id="email-label">Email para contato <input id="email" type="email" class="form-control" placeholder="Digite seu email" required/></label>
+        <label for="number" id="number-label">Número de funcionários da empresa <input id="number" type="number" class="form-control" min=2 max=30 placeholder="Digite um número" required/></label>
+      </div>
+      <div class="form-group">
+        <label for="dropdown">Qual o faturamento anual médio da empresa?
+          <select id="dropdown" name="faturamento" class="form-control" required>
+            <option>(escolha uma opção)</option>
+            <option>Até 100 mil reais</option>
+            <option>Entre 100 mil - 500 mil</option>
+            <option>Entre 500 mil - 1 milhão.</option>
+            <option>Entre 1 milhão - 2 milhões</option>
+            <option>Entre 2 milhões - 10 milhões</option>
+            <option>Entre 10 milhões - 100 milhões</option>
+            <option>Mais de 100 milhões</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group"><label id="titulo-radio">Escolha o melhor horário para uma reunião:</label>
+        <label><input type="radio" name="available-appointment-time" value="morning" class="input-radio" checked required>08:00 - 12:00</label>
+        <label><input type="radio" name="available-appointment-time" value="afternoon" class="input-radio">14:00 - 18:00</label>
+        <label><input type="radio" name="available-appointment-time" value="night" class="input-radio">19:00 - 22:00</label>
+      </div>
+      <div class="form-group">Áreas de interesse em consultoria:
+        <label id="checkbox-label"><input type="checkbox" class="input-checkbox" value="marketing" required/>Marketing</label>
+        <label><input type="checkbox" class="input-checkbox" value="recursos-humanos"/>Recursos Humanos</label>
+        <label><input type="checkbox" class="input-checkbox" value="financeiro"/>Financeiro</label>
+        <label><input type="checkbox" class="input-checkbox" value="contratos"/>Contratos</label>
+        <label><input type="checkbox" class="input-checkbox" value="comercial"/>Comercial</label>
+        <label><input type="checkbox" class="input-checkbox" value="tecnico"/>Técnico</label>
+      </div>
+      <div class="form-group">
+        <label>Adicione algum comentário (opcional):
+        <br>
+        <textarea id="aditional-comment" name="aditional-comment" class="form-control" row=3 cols=30 placeholder="Comentário (opcional)"></textarea>
+        </label>
+      </div>
+        <input id="submit" type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
